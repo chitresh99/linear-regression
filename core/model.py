@@ -20,6 +20,7 @@ class LinearRegression:
         self.method = method
         self.learning_rate = learning_rate
         self.n_iterations = n_iterations
+        self.regularization = regularization
         self.reg_lambda = reg_lambda
         self.batch_size = batch_size
         self.random_state = random_state
@@ -33,8 +34,8 @@ class LinearRegression:
     
     def _compute_cost(
             self,
-            X: np.darray,
-            y: np.darray,
+            X: np.ndarray,
+            y: np.ndarray,
             theta: np.ndarray
     ) -> float:
         m = len(y)

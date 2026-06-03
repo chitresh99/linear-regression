@@ -27,14 +27,14 @@ def generate_synthetic_data(
     y = X.dot(true_coefficient) + true_bias + np.random.randn(n_samples) * noise
     return X,y
 
-def load_diabetes_dataset()->Tuple[np.ndarray,np.ndarray,Dict]:
+def load_diabetes_dataset() -> Tuple[np.ndarray, np.ndarray, Dict]:
     diabetes = load_diabetes()
     metadata = {
         'feature_names': diabetes.feature_names,
-        'target_name': diabetes.target_names[0],
-        'description':diabetes.DESCR[:500] + "..."
+        'target_name': 'disease_progression',
+        'description': diabetes.DESCR[:500]
     }
-    return diabetes.data,diabetes.target,metadata
+    return diabetes.data, diabetes.target, metadata
 
 def split_data(
         X: np.ndarray,
