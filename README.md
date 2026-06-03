@@ -136,7 +136,7 @@ This ensures:
 ## Project Structure
 
 ```
-linear_regression_project/
+linear-regression/
 │
 ├── core/
 │   └── model.py                    # Main LinearRegression class
